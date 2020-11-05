@@ -85,7 +85,13 @@ class NewRoute extends StatelessWidget {
               },
               child: Text("混合状态管理"),
             ),
-
+            RaisedButton(
+              onPressed: (){
+                var result = Navigator.pushNamed(context, "state_manager_mixed");
+                print("路由返回值: $result");
+              },
+              child: Text("基础组件"),
+            ),
           ],
         )
       ),
