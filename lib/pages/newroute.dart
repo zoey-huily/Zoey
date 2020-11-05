@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/pages/radomwords_route.dart';
-import 'package:flutter_app_demo/pages/state_life.dart';
+import 'file:///D:/workspace/flutter_app_demo/lib/pages/statemanager/state_life.dart';
 
 class NewRoute extends StatelessWidget {
   @override
@@ -53,7 +53,38 @@ class NewRoute extends StatelessWidget {
               },
               child: Text("state生命周期"),
             ),
+            //获取父类的state
+            RaisedButton(
+              onPressed: (){
+                var result = Navigator.pushNamed(context, "get_father_state_route");
+                print("路由返回值: $result");
+              },
+              child: Text("子树获取state对象"),
+            ),
 
+            RaisedButton(
+              onPressed: (){
+                var result = Navigator.pushNamed(context, "state_manager_own");
+                print("路由返回值: $result");
+              },
+              child: Text("widget管理自身状态"),
+            ),
+
+            RaisedButton(
+              onPressed: (){
+                var result = Navigator.pushNamed(context, "state_manager_father");
+                print("路由返回值: $result");
+              },
+              child: Text("widget管理子widget状态"),
+            ),
+
+            RaisedButton(
+              onPressed: (){
+                var result = Navigator.pushNamed(context, "state_manager_mixed");
+                print("路由返回值: $result");
+              },
+              child: Text("混合状态管理"),
+            ),
 
           ],
         )
