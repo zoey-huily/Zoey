@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'file:///D:/workspace/flutter_app_demo/lib/pages/statemanager/state_life.dart';
+import 'package:flutter_app_demo/pages/statemanager/state_life.dart';
 
 class StateLife extends StatelessWidget {
   @override
