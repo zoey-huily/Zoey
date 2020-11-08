@@ -3,50 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/routes/routes.dart';
 
-// class ListMenu extends StatelessWidget {
-//   ListMenu({Key key, this.title}) : super(key: key);
-//   final String title;
-//   @override
-//   Widget build(BuildContext context) {
-//     Widget divider1=Divider(color: Colors.blue,);
-//     Widget divider2=Divider(color: Colors.green);
-//     return Scaffold(
-//       appBar: AppBar(
-//         // Here we take the value from the MyHomePage object that was created by
-//         // the App.build method, and use it to set our appbar title.
-//         title: Text(title),
-//         centerTitle: true,
-//       ),
-//       body: new ListDemo()
-//     );
-//   }
-// }
-
-// class ListView3 extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     //下划线widget预定义以供复用。
-//     Widget divider1=Divider(color: Colors.blue,);
-//     Widget divider2=Divider(color: Colors.green);
-//     return ListView.separated(
-//       itemCount: 20,
-//       //列表项构造器
-//       itemBuilder: (BuildContext context, int index) {
-//         return ListTile(title: Text("$index"));
-//       },
-//       //分割器构造器
-//       separatorBuilder: (BuildContext context, int index) {
-//         return index%2==0?divider1:divider2;
-//       },
-//     );
-//   }
-// }
-
-
-
-
-
-
 
 // BEGIN listDemo
 
@@ -162,10 +118,10 @@ class ListMenu extends StatelessWidget {
                 child: CircleAvatar(child: Text('8')),
               ),
               title: Text(
-                  "打开提示页"
+                  "基础组件"
               ),
               onTap: (){
-                Navigator.pushNamed(context, "get_father_state_route");
+                Navigator.pushNamed(context, "widget_list_menu");
               },
             ),
             ListTile(
