@@ -129,10 +129,10 @@ class ListMenu extends StatelessWidget {
                 child: CircleAvatar(child: Text('9')),
               ),
               title: Text(
-                  "打开提示页"
+                  "布局组件"
               ),
               onTap: (){
-                Navigator.pushNamed(context, "get_father_state_route");
+                Navigator.pushNamed(context, "widget_layout_menu");
               },
             ),
             ListTile(
@@ -140,10 +140,10 @@ class ListMenu extends StatelessWidget {
                 child: CircleAvatar(child: Text('10')),
               ),
               title: Text(
-                  "打开提示页"
+                  "容器组件"
               ),
               onTap: (){
-                Navigator.pushNamed(context, "get_father_state_route");
+                Navigator.pushNamed(context, "widget_container_menu");
               },
             ),
             ListTile(
@@ -151,10 +151,10 @@ class ListMenu extends StatelessWidget {
                 child: CircleAvatar(child: Text('11')),
               ),
               title: Text(
-                  "打开提示页"
+                  "滚动组件"
               ),
               onTap: (){
-                Navigator.pushNamed(context, "get_father_state_route");
+                Navigator.pushNamed(context, "widget_scroll_menu");
               },
             ),
             ListTile(
@@ -162,10 +162,10 @@ class ListMenu extends StatelessWidget {
                 child: CircleAvatar(child: Text('12')),
               ),
               title: Text(
-                  "打开提示页"
+                  "功能组件"
               ),
               onTap: (){
-                Navigator.pushNamed(context, "get_father_state_route");
+                Navigator.pushNamed(context, "widget_function_menu");
               },
             ),
           ],
