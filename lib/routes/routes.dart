@@ -8,6 +8,7 @@ import 'package:flutter_app_demo/pages/basewidgets/icon.dart';
 import 'package:flutter_app_demo/pages/basewidgets/index.dart';
 import 'package:flutter_app_demo/pages/basewidgets/picture.dart';
 import 'package:flutter_app_demo/pages/basewidgets/progress.dart';
+import 'package:flutter_app_demo/pages/basewidgets/snackbar.dart';
 import 'package:flutter_app_demo/pages/basewidgets/switch.dart';
 import 'package:flutter_app_demo/pages/basewidgets/text.dart';
 import 'package:flutter_app_demo/pages/basewidgets/textfield.dart';
@@ -45,7 +46,7 @@ import 'package:flutter_app_demo/pages/widgetscroll/scroll_listview.dart';
 import 'package:flutter_app_demo/pages/widgetscroll/scroll_single_child.dart';
 
 final routes= {
-  "/": (context) => ListMenu(title: '功能菜单'), //注册首页路由,
+  "/": (context) => ListMenu(), //注册首页路由,
   "count_demo":(context)=>CountDemo(),
   "tiproute":(context)=>TipRoute(),
   "newroute":(context)=>NewRoute(),
@@ -87,6 +88,8 @@ final routes= {
   "scroll_listen_control":(context)=>ScrollListenAndControl(),
   "scroll_listview":(context)=>ScrollListView(),
   "scroll_single_child":(context)=>ScrollSingleChild(),
+  "snackbar":(context)=>SnackbarsDemo(),
+
 
 
 };

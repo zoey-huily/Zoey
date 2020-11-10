@@ -123,6 +123,17 @@ class WidgetsListMenu extends StatelessWidget {
                 Navigator.pushNamed(context, "progress");
               },
             ),
+            ListTile(
+              leading: ExcludeSemantics(
+                child: CircleAvatar(child: Text('9')),
+              ),
+              title: Text(
+                  "提示框"
+              ),
+              onTap: (){
+                Navigator.pushNamed(context, "snackbar");
+              },
+            ),
           ],
         ),
       ),

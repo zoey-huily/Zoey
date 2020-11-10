@@ -3,12 +3,50 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/routes/routes.dart';
 
+class ListMenu extends StatefulWidget {
+  @override
+  WillPopScopeTestRouteState createState() {
+    return new WillPopScopeTestRouteState();
+  }
+}
+
+class WillPopScopeTestRouteState extends State<ListMenu> {
+  DateTime _lastPressedAt; //上次点击时间
+
+  @override
+  Widget build(BuildContext context) {
+    return new WillPopScope(
+        onWillPop: () async {
+          if (_lastPressedAt == null ||
+              DateTime.now().difference(_lastPressedAt) > Duration(seconds: 1)) {
+            //两次点击间隔超过1秒则重新计时
+            _lastPressedAt = DateTime.now();
+            ScaffoldMessenger.of(context).hideCurrentSnackBar();
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content:Text("再按一次退出近课",textAlign: TextAlign.center),
+                duration: Duration(seconds: 1),
+                behavior: SnackBarBehavior.floating,
+                width: MediaQuery.of(context).size.width*0.5,
+                //margin: EdgeInsets.only(top: 50.0, left: 120.0),
+              )
+            );
+            return false;
+          }
+          return true;
+        },
+        child: MenuView()
+    );
+  }
+}
+
+
 
 // BEGIN listDemo
 
-class ListMenu extends StatelessWidget {
+class MenuView extends StatelessWidget {
   //const ListDemo({Key key}) : super(key: key);
-  ListMenu({Key key, this.title}) : super(key: key);
+  MenuView({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
@@ -16,7 +54,7 @@ class ListMenu extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text("$title"),
+        title: Text("首页导航"),
         centerTitle: true,
       ),
       body: Scrollbar(
