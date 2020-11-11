@@ -134,6 +134,17 @@ class WidgetsListMenu extends StatelessWidget {
                 Navigator.pushNamed(context, "snackbar");
               },
             ),
+            ListTile(
+              leading: ExcludeSemantics(
+                child: CircleAvatar(child: Text('9')),
+              ),
+              title: Text(
+                  "dialog_test"
+              ),
+              onTap: (){
+                Navigator.pushNamed(context, "dialog_test");
+              },
+            ),
           ],
         ),
       ),

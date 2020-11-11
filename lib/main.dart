@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/routes/routes.dart';
+import 'package:flutter_app_demo/utils/nav_key.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: NavKey.navKey,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.

@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/pages/basewidgets/button.dart';
 import 'package:flutter_app_demo/pages/basewidgets/checkbox.dart';
+import 'package:flutter_app_demo/pages/basewidgets/dialog_test.dart';
 import 'package:flutter_app_demo/pages/basewidgets/form.dart';
 import 'package:flutter_app_demo/pages/basewidgets/icon.dart';
 import 'package:flutter_app_demo/pages/basewidgets/index.dart';
@@ -44,6 +45,7 @@ import 'package:flutter_app_demo/pages/widgetscroll/scroll_gridview.dart';
 import 'package:flutter_app_demo/pages/widgetscroll/scroll_listen_control.dart';
 import 'package:flutter_app_demo/pages/widgetscroll/scroll_listview.dart';
 import 'package:flutter_app_demo/pages/widgetscroll/scroll_single_child.dart';
+import 'package:flutter_app_demo/utils/widgets_ui/page_scaffold.dart';
 
 final routes= {
   "/": (context) => ListMenu(), //注册首页路由,
@@ -89,6 +91,8 @@ final routes= {
   "scroll_listview":(context)=>ScrollListView(),
   "scroll_single_child":(context)=>ScrollSingleChild(),
   "snackbar":(context)=>SnackbarsDemo(),
+  "dialog_test":(context)=>DialogRoute(),
+  //"dialog_test":PageInfo("dialog", (context) => DialogRoute()),
 
 
 
